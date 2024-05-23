@@ -3,7 +3,7 @@
 # Momentum
 
  <p align="center"><img src="https://github.com/Parkseolmin/Todo-List-App-with-React/assets/76764414/e7235ae7-9ef7-444a-9ae1-12cf92e02576e" alt="Momentum이미지" width="400"/></p>
-<p align="center">배포 URL : https://react-momentum-one.vercel.app/</p>
+<p align="center">배포 URL : https://momentum-wine.vercel.app/pomodoro</p>
 
 ## 목적
 Momentum은 Momentum Chrome 확장 프로그램의 기능을 React를 사용하여 재구현한 프로젝트입니다. 이 프로젝트의 목적은 사용자가 브라우저를 열 때마다 동기부여를 제공하고 생산성을 높이는 도구를 제공하는 것입니다.
