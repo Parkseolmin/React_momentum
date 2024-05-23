@@ -1,0 +1,42 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+img {
+  width: 100%;
+}
+.weatherInfo {
+  cursor: pointer;
+  color: white;
+}
+
+.iconTmp {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 10px;
+}
+.iconTmp > span {
+  width: 30px;
+}
+
+.temp {
+  font-size: 1.5rem;
+}
+
+.weatherName {
+  font-size: 1rem;
+  opacity: 0.85;
+  letter-spacing: -1px;
+}
+
+@media screen and (max-width: 768px) {
+  .weatherName {
+    font-size: 0.8rem;
+  }
+}

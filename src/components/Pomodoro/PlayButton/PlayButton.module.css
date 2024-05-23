@@ -1,0 +1,9 @@
+.playbtn {
+  width: 6rem;
+}
+@media screen and (max-width: 768px) {
+  .playbtn {
+    width: 4rem;
+    margin-bottom: 10px;
+  }
+}
