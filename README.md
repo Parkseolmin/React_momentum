@@ -43,7 +43,7 @@ Momentum Clone은 사용자가 하루를 시작할 때마다 힘을 주는 도�
 
 ## 사용 방법
 
-<div display="flex">
+<div align="center">
     <img src="https://github.com/Parkseolmin/React_momentum/assets/76764414/8125b23a-eab4-4c87-bfc1-81c5b215341c" alt="main 페이지" width="24%">
     <img src="https://github.com/Parkseolmin/React_momentum/assets/76764414/e2b1ecce-899b-4aab-8742-883423cc43a0" alt="todo 페이지" width="24%">
     <img src="https://github.com/Parkseolmin/React_momentum/assets/76764414/4451f16c-ba22-48ec-9ed4-53ec29e06e19" alt="pomodoro 페이지" width="24%">
