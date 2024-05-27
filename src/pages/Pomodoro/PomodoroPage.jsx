@@ -20,9 +20,9 @@ export default function PomodoroPage() {
       <SettingsContext.Provider
         value={{
           showSettings,
-          setShowSettings,
           workMinutes,
           breakMinutes,
+          setShowSettings,
           setWorkMinutes,
           setBreakMinutes,
         }}

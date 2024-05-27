@@ -8,11 +8,10 @@ const useFamousSaying = () => {
   const fetchSaying = () => {
     const advice = kadvice.getOne();
     localStorage.setItem('famousSaying', JSON.stringify(advice));
-    localStorage.setItem('lastSayingFetchTime', Date.now());
     return advice;
   };
 
-  const { data, isLoading, error, refetch } = useQuery({
+  const { data, isLoading, refetch } = useQuery({
     queryKey: ['famousSaying'],
     queryFn: fetchSaying,
     enabled: isEnabled,
@@ -32,7 +31,7 @@ const useFamousSaying = () => {
     }
   }, [data]);
 
-  return { data, isLoading, error, fetchSayingManually };
+  return { data, isLoading, fetchSayingManually };
 };
 
 export default useFamousSaying;

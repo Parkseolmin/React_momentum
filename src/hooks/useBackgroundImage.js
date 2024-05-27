@@ -1,25 +1,22 @@
 import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 import { useCallback, useEffect, useState } from 'react';
 
 export function useBackgroundImage() {
   const [backgroundImageUrl, setBackgroundImageUrl] = useState(
     () => localStorage.getItem('backgroundImageUrl') || ''
   );
-  // const url = `https://api.unsplash.com/photos/random?client_id=${process.env.REACT_APP_UNSPLASH_API}`;
   const url = `https://api.unsplash.com/photos/random?query=dark&client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}`;
 
   const fetchImage = useCallback(async () => {
     try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      const data = await response.json();
+      const response = await axios.get(url);
+      const data = response.data;
       localStorage.setItem('backgroundImageUrl', data.urls.full);
       localStorage.setItem('lastFetchTime', Date.now());
       return data.urls.full;
     } catch (error) {
-      throw error;
+      throw new Error('Failed to fetch background image');
     }
   }, [url]);
 
@@ -35,9 +32,19 @@ export function useBackgroundImage() {
   });
 
   useEffect(() => {
+    let isMounted = true;
+
     if (!backgroundImageUrl) {
-      fetchImage().then(setBackgroundImageUrl).catch(console.error);
+      fetchImage() //
+        .then((imageUrl) => {
+          if (isMounted) {
+            setBackgroundImageUrl(imageUrl);
+          }
+        })
+        .catch(console.error);
     }
+
+    return () => (isMounted = false);
   }, [backgroundImageUrl, fetchImage]);
 
   return { isLoading, error, backgroundImageUrl };

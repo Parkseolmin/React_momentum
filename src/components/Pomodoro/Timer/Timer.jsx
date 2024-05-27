@@ -19,15 +19,7 @@ const green = 'rgba(34, 187, 140, 0.85)';
 export default function Timer() {
   const { workMinutes, breakMinutes, setShowSettings } =
     useContext(SettingsContext);
-  const [
-    isPaused,
-    togglePause,
-    mode,
-    minutes,
-    seconds,
-    percentage,
-    innerPercentage,
-  ] = useTimer(workMinutes, breakMinutes);
+  const Timer = useTimer(workMinutes, breakMinutes);
   const { showItemBox, setShowItemBox, itemBoxRef, clockRef } =
     useOptionContext();
   const location = useLocation();
@@ -44,15 +36,15 @@ export default function Timer() {
         <Arrow location={location} itemBoxRef={itemBoxRef} styles={styles} />
       )}
       <CircularProgressbarWithChildren
-        value={percentage}
-        text={`${minutes}:${seconds}`}
+        value={Timer.percentage}
+        text={`${Timer.minutes}:${Timer.seconds}`}
         styles={buildStyles({
           textColor: '#fff',
-          pathColor: mode === 'work' ? red : green,
+          pathColor: Timer.mode === 'work' ? red : green,
           trailColor: 'transparent',
         })}
         className={
-          mode === 'work'
+          Timer.Timermode === 'work'
             ? `${styles.circularProgressbarWorkMode}`
             : `${styles.circularProgressbarBreakMode}`
         }
@@ -63,23 +55,23 @@ export default function Timer() {
           }}
         >
           <CircularProgressbar
-            value={innerPercentage}
+            value={Timer.innerPercentage}
             styles={buildStyles({
-              pathColor: mode === 'work' ? red : green,
+              pathColor: Timer.mode === 'work' ? red : green,
               trailColor: 'transparent',
             })}
             className={
-              mode === 'work'
+              Timer.mode === 'work'
                 ? `${styles.circularProgressbarWorkMode}`
                 : `${styles.circularProgressbarBreakMode}`
             }
           />
         </div>
         <div style={{ marginTop: '20px' }} className={styles.btnbox}>
-          {isPaused ? (
-            <PlayButton onClick={togglePause} />
+          {Timer.isPaused ? (
+            <PlayButton onClick={Timer.togglePause} />
           ) : (
-            <PauseButton onClick={togglePause} />
+            <PauseButton onClick={Timer.togglePause} />
           )}
         </div>
       </CircularProgressbarWithChildren>

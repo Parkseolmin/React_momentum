@@ -51,7 +51,7 @@ export const CallGPT = async ({ prompt }) => {
       {
         model: 'gpt-3.5-turbo',
         messages,
-        temperature: 0.7,
+        temperature: 0.4,
         max_tokens: 1_000,
       },
       {

@@ -34,7 +34,7 @@ export function useTimer(workMinutes, breakMinutes) {
   const seconds =
     secondsLeft % 60 < 10 ? `0${secondsLeft % 60}` : secondsLeft % 60;
 
-  return [
+  return {
     isPaused,
     togglePause,
     mode,
@@ -42,5 +42,5 @@ export function useTimer(workMinutes, breakMinutes) {
     seconds,
     percentage,
     innerPercentage,
-  ];
+  };
 }
