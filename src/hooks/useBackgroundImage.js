@@ -23,25 +23,40 @@ export function useBackgroundImage() {
   const { isLoading, error } = useQuery({
     queryKey: ['backgroundImage'],
     queryFn: fetchImage,
-    enabled:
-      !backgroundImageUrl ||
-      Date.now() - parseInt(localStorage.getItem('lastFetchTime'), 10) >
-        1000 * 60 * 60 * 5,
-    staleTime: 1000 * 60 * 60 * 5, // Consider the image data as fresh for 24 hours
+    enabled: !backgroundImageUrl,
+    staleTime: 1000 * 60 * 60 * 5,
     onSuccess: (data) => setBackgroundImageUrl(data),
   });
 
   useEffect(() => {
     let isMounted = true;
 
+    const fetchAndSetImage = async () => {
+      try {
+        const imageUrl = await fetchImage();
+        if (isMounted) {
+          setBackgroundImageUrl(imageUrl);
+        }
+      } catch (error) {
+        console.error('Failed to fetch background image:', error);
+      }
+    };
+
     if (!backgroundImageUrl) {
-      fetchImage() //
-        .then((imageUrl) => {
-          if (isMounted) {
-            setBackgroundImageUrl(imageUrl);
-          }
-        })
-        .catch(console.error);
+      // fetchImage() //
+      //   .then((imageUrl) => {
+      //     if (isMounted) {
+      //       setBackgroundImageUrl(imageUrl);
+      //     }
+      //   })
+      //   .catch(console.error);
+      fetchAndSetImage();
+    } else {
+      // 이미지 URL이 있을 경우, lastFetchTime을 확인하여 5시간이 지났는지 검사
+      const lastFetchTime = parseInt(localStorage.getItem('lastFetchTime'), 10);
+      if (Date.now() - lastFetchTime > 1000 * 60 * 60 * 5 || !lastFetchTime) {
+        fetchAndSetImage();
+      }
     }
 
     return () => (isMounted = false);
