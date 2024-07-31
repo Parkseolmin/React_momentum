@@ -1,7 +1,6 @@
 import styles from './WeatherDisplay.module.css';
 import Loading from 'components/Loading/Loading';
 import { useWeather } from 'hooks/useWeather';
-import SubDisplay from './SubDisplay';
 
 export default function WeatherDisplay() {
   const {

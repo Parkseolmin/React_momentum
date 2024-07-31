@@ -13,16 +13,16 @@ export default function Navbar() {
     <header>
       <nav className={styles.header__wrap}>
         <div className={styles.header__left}>
-          <Link to={'/'}>
+          <Link to={'/'} aria-label='home'>
             <IoHomeOutline />
           </Link>
-          <Link to={'/todo'}>
+          <Link to={'/todo'} aria-label='todo'>
             <BsPencil />
           </Link>
-          <Link to={'/pomodoro'}>
+          <Link to={'/pomodoro'} aria-label='pomodoro'>
             <IoMdTimer />
           </Link>
-          <Link to={'/gpt'}>
+          <Link to={'/gpt'} aria-label='gpt'>
             <VscRobot />
           </Link>
         </div>
