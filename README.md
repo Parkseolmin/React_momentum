@@ -1,6 +1,6 @@
 # Momentum
 
-<p align="center"><img src="https://github.com/Parkseolmin/Todo-List-App-with-React/assets/76764414/e7235ae7-9ef7-444a-9ae1-12cf92e02576e" alt="Momentum이미지" width="400"/></p>
+<p align="center"><img src="https://github.com/Parkseolmin/Todo-List-App-with-React/assets/76764414/e7235ae7-9ef7-444a-9ae1-12cf92e02576e" alt="Momentum이미지" width="300"/></p>
 <p align="center">배포 URL : <a href="https://momentum-wine.vercel.app" target="_blank">https://momentum-wine.vercel.app/</a></p>
 
 ## 목적
