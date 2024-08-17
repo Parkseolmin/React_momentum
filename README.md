@@ -26,11 +26,27 @@ Momentum Clone은 사용자가 브라우저를 열 때마다 아름다운 배경
 
 Momentum Clone은 사용자가 하루를 시작할 때마다 힘을 주는 도구입니다. 프로그램은 사용자가 브라우저를 열 때마다 아름다운 배경 이미지를 보여주고, 영감을 주는 인용문을 표시합니다. 또한 사용자는 할 일 목록을 관리하고, 현재 위치의 날씨 정보를 확인할 수 있습니다.
 
+## 의존성 API
+이 프로젝트는 다음의 API에 의존하고 있습니다:
+- **Unsplash API**: 무료 고화질 이미지 제공.
+- **Quotable API**: 인용구를 제공하는 API.
+- **OpenWeatherMap API**: 날씨 정보를 제공하는 API.
+
 ## 의존성
-- React
-- Unsplash API
-- Quotable API
-- OpenWeatherMap API
+이 프로젝트는 다음의 라이브러리 및 패키지에 의존하고 있습니다:
+- **React**: 사용자 인터페이스를 구축하기 위한 JavaScript 라이브러리.
+- **Axios**: HTTP 요청을 쉽게 처리하기 위한 Promise 기반의 라이브러리.
+- **Ant Design (antd)**: 다양한 UI 컴포넌트를 제공하는 React UI 라이브러리.
+- **React Router DOM**: SPA에서 페이지 간 내비게이션을 관리하는 라이브러리.
+- **Styled Components**: CSS-in-JS 라이브러리로, 컴포넌트 기반 스타일링을 가능하게 함.
+- **React Query**: 서버 상태 관리를 위한 라이브러리.
+- **React Testing Library**: React 컴포넌트를 테스트하는 데 유용한 도구.
+- **UUID**: 고유 식별자를 생성하기 위한 라이브러리.
+- **React Circular Progressbar**: 원형 진행 바 컴포넌트를 제공하는 라이브러리.
+- **Web Vitals**: 웹 성능 측정을 위한 라이브러리.
+- **React Helmet Async**: 메타 태그 관리를 위한 라이브러리.
+- **React Slider**: 슬라이더 UI 컴포넌트를 제공하는 라이브러리.
+- **Kadvice**: 특정 기능(예: 조언 제공)을 위한 라이브러리.
 
 ## 설치 방법
 1. GitHub 저장소를 클론합니다.
