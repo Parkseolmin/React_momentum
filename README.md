@@ -23,6 +23,7 @@ Momentum Clone은 사용자가 브라우저를 열 때마다 아름다운 배경
     <img src="https://github.com/Parkseolmin/React_momentum/assets/76764414/48727c64-cee1-4bb7-9d66-0d21a40cce3c" alt="gpt 페이지" width="24%">
 </div>
 
+
 Momentum Clone은 사용자가 하루를 시작할 때마다 힘을 주는 도구입니다. 프로그램은 사용자가 브라우저를 열 때마다 아름다운 배경 이미지를 보여주고, 영감을 주는 인용문을 표시합니다. 또한 사용자는 할 일 목록을 관리하고, 현재 위치의 날씨 정보를 확인할 수 있습니다.
 
 ## 의존성
