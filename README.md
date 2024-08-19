@@ -1,7 +1,8 @@
-# Momentum
+# Momentum 🗓️
 
 <p align="center"><img src="https://github.com/Parkseolmin/Todo-List-App-with-React/assets/76764414/e7235ae7-9ef7-444a-9ae1-12cf92e02576e" alt="Momentum이미지" width="300"/></p>
 <p align="center">배포 URL : <a href="https://momentum-wine.vercel.app" target="_blank">https://momentum-wine.vercel.app/</a></p>
+<br>
 
 ## 목적
 Momentum은 Momentum Chrome 확장 프로그램의 기능을 React를 사용하여 재구현한 프로젝트입니다. 이 프로젝트의 목적은 사용자가 브라우저를 열 때마다 동기부여를 제공하고 생산성을 높이는 도구를 제공하는 것입니다.
@@ -11,9 +12,11 @@ Momentum Clone은 사용자가 브라우저를 열 때마다 아름다운 배경
 
 ## 목차
 1. [소개](#소개)
-2. [Dependencies](#Dependencies)
+2. [주요 기능](#주요-기능)
 3. [설치 방법](#설치-방법)
 4. [사용 방법](#사용-방법)
+5. [버전 정보](#버전-정보)
+6. [프로젝트 회고록 보러가기](#프로젝트-회고록-보러가기)
 
 ## 소개
 <div align="center">
@@ -26,27 +29,22 @@ Momentum Clone은 사용자가 브라우저를 열 때마다 아름다운 배경
 
 Momentum Clone은 사용자가 하루를 시작할 때마다 힘을 주는 도구입니다. 프로그램은 사용자가 브라우저를 열 때마다 아름다운 배경 이미지를 보여주고, 영감을 주는 인용문을 표시합니다. 또한 사용자는 할 일 목록을 관리하고, 현재 위치의 날씨 정보를 확인할 수 있습니다.
 
-## Dependencies API
-이 프로젝트는 다음의 API에 의존하고 있습니다:
-- **Unsplash API**: 무료 고화질 이미지 제공.
-- **Quotable API**: 인용구를 제공하는 API.
-- **OpenWeatherMap API**: 날씨 정보를 제공하는 API.
+## 주요 기능
+- 배경 이미지
+  - 일정 시간마다 배경 이미지 변경
+- 날씨 정보
+  - 클릭 시 데이터를 새로고침하여 실시간 정보 확인
+- TODO
+  - TODO 로컬 스토리지에 저장 및 불러오기
+  - 검색 필터
+  - 카테고리별 필터링
+  - 자동 스크롤
+  - 다크/라이트 모드
+- AI
+  - TODO LIST 관리 및 GPT 평가 메시지 생성
+  - TextArea에 하루 일과에 대한 평가를 통해 메시지 생성성 
 
-## Dependencies
-이 프로젝트는 다음의 라이브러리 및 패키지에 의존하고 있습니다:
-- **React**: 사용자 인터페이스를 구축하기 위한 JavaScript 라이브러리.
-- **Axios**: HTTP 요청을 쉽게 처리하기 위한 Promise 기반의 라이브러리.
-- **Ant Design (antd)**: 다양한 UI 컴포넌트를 제공하는 React UI 라이브러리.
-- **React Router DOM**: SPA에서 페이지 간 내비게이션을 관리하는 라이브러리.
-- **Styled Components**: CSS-in-JS 라이브러리로, 컴포넌트 기반 스타일링을 가능하게 함.
-- **React Query**: 서버 상태 관리를 위한 라이브러리.
-- **React Testing Library**: React 컴포넌트를 테스트하는 데 유용한 도구.
-- **UUID**: 고유 식별자를 생성하기 위한 라이브러리.
-- **React Circular Progressbar**: 원형 진행 바 컴포넌트를 제공하는 라이브러리.
-- **Web Vitals**: 웹 성능 측정을 위한 라이브러리.
-- **React Helmet Async**: 메타 태그 관리를 위한 라이브러리.
-- **React Slider**: 슬라이더 UI 컴포넌트를 제공하는 라이브러리.
-- **Kadvice**: 특정 기능(예: 조언 제공)을 위한 라이브러리.
+
 
 ## 설치 방법
 1. GitHub 저장소를 클론합니다.
@@ -84,3 +82,28 @@ Momentum Clone은 사용자가 하루를 시작할 때마다 힘을 주는 도�
 7. GPT API를 이용해 할 일 목록에 작성한 내용을 기반으로 평가 및 조언을 작성해줍니다.
  - 첫 번째 버튼 - 할 일 목록에 작성한 내용을 기반
  - 두 번째 버튼 - TextArea에 작성한 내용을 기반
+
+## 버전 정보
+
+현재 버전: v1.0.0 (베타)
+
+향후 업데이트 계획:
+- v1.1.0: 성능 최적화
+  - Google Chrome의 Lighthouse를 통해 최적화 진행
+  - 반응성, 접근성, SEO 최적화
+  - 코드 품질 향상
+  - 사용자 경험 개선
+- v1.2.0: TypeScript로의 전환
+  - 정적 타입 검사를 통한 코드 안정성 향상
+  - 개발자 경험 개선 및 버그 감소
+  - 더 나은 유지보수성과 확장성 확보
+<br>
+<br>
+
+## 프로젝트 회고록 보러가기
+<div display="flex" flexdirection="column">
+    <p>[Blog 글 보러가기]</p>
+<a href="https://snowman-seolmini.tistory.com/70" target="_blank">
+<img width="330" alt="profile" src="https://github.com/user-attachments/assets/40d8b6b5-2a4d-419e-b484-16f369f0e6f9"/>
+</a>
+</div>
