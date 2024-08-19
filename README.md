@@ -4,12 +4,6 @@
 <p align="center">배포 URL : <a href="https://momentum-wine.vercel.app" target="_blank">https://momentum-wine.vercel.app/</a></p>
 <br>
 
-## 목적
-Momentum은 Momentum Chrome 확장 프로그램의 기능을 React를 사용하여 재구현한 프로젝트입니다. 이 프로젝트의 목적은 사용자가 브라우저를 열 때마다 동기부여를 제공하고 생산성을 높이는 도구를 제공하는 것입니다.
-
-## 요약
-Momentum Clone은 사용자가 브라우저를 열 때마다 아름다운 배경 이미지, 영감을 주는 인용문, 할 일 목록, 현재 날씨 정보 등을 표시하여 사용자의 일상을 더욱 활기차게 만들어 줍니다.
-
 ## 목차
 1. [소개](#소개)
 2. [주요 기능](#주요-기능)
@@ -20,9 +14,26 @@ Momentum Clone은 사용자가 브라우저를 열 때마다 아름다운 배경
 
 ## 소개
 <div align="center">
-    <img src="https://github.com/Parkseolmin/React_momentum/assets/76764414/8125b23a-eab4-4c87-bfc1-81c5b215341c" alt="main 페이지" width="24%">
-    <img src="https://github.com/Parkseolmin/React_momentum/assets/76764414/e2b1ecce-899b-4aab-8742-883423cc43a0" alt="todo 페이지" width="24%">
+    <img src="https://github.com/user-attachments/assets/fc097875-07fe-4374-866b-a9e6f05c7a06" alt="main 페이지" width="45%">
+    <img src="https://github.com/user-attachments/assets/49b53479-8ba9-4ee8-b9b1-0e470cca3555" alt="todo 페이지" width="45%">
 </div>
+<div align="center">
+    <img src="https://github.com/user-attachments/assets/e71af24f-3264-4f06-8117-3436215fe84f" alt="pomodoro 페이지" width="45%">
+    <img src="https://github.com/user-attachments/assets/6e868d57-071d-41e0-bdf3-50efcdef77cd" alt="gpt 페이지" width="45%">
+</div>
+<br>
+Momentum은 Momentum Chrome 확장 프로그램의 기능을 React를 사용하여 재구현한 프로젝트입니다.<br>
+이 프로젝트의 목적은 사용자가 브라우저를 열 때마다 아름다운 배경 이미지, 영감을 주는 인용문, 할 일 목록, 현재 날씨 정보 등을 표시하며,
+ai가 할 일 목록에 대한 평가 및 응원 메시지를 제공하여 사용자의 일상을 더욱 활기차게 만들어주며 생산성에 도움을 주는 것입니다.
+<br>
+
+## 주요 기능
+1. 일정 시간을 기준으로 바뀌는 배경 이미지
+2. 현재 시간 표시
+3. 현재 위치 정보를 바탕으로 날씨 정보 제공
+4. 명언 제공
+5. TODO LIST
+6. GPT
 
 ## 설치 방법
 1. GitHub 저장소를 클론합니다.
