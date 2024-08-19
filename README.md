@@ -22,29 +22,26 @@ Momentum Clone은 사용자가 브라우저를 열 때마다 아름다운 배경
 <div align="center">
     <img src="https://github.com/Parkseolmin/React_momentum/assets/76764414/8125b23a-eab4-4c87-bfc1-81c5b215341c" alt="main 페이지" width="24%">
     <img src="https://github.com/Parkseolmin/React_momentum/assets/76764414/e2b1ecce-899b-4aab-8742-883423cc43a0" alt="todo 페이지" width="24%">
-    <img src="https://github.com/Parkseolmin/React_momentum/asse능
-- AI
-  - TODO LIST 관리 및 GPT 평가 메시지 생성
-  - TextArea에 하루 일과에 대한 평가를 통해 메시지 생성성 
-<br>
-<br>
+</div>
 
 ## 설치 방법
 1. GitHub 저장소를 클론합니다.
-    ```bash
-    git clone https://github.com/Parkseolmin/React_Momentum.git
-    cd React_Momentum
-    ```
+```bash
+git clone https://github.com/Parkseolmin/React_Momentum.git
+cd React_Momentum
+```
+
 2. `npm install` 명령어를 사용하여 의존성을 설치합니다.
-    ```bash
-    npm install
-    ```
+```bash
+npm install
+```
+
 3. 프로젝트 루트 디렉토리에 `.env` 파일을 생성하고, API 키를 설정합니다.
-    ```
-    REACT_APP_UNSPLASH_API=your_unsplash_api_key
-    REACT_APP_WEATHER_API=your_openweathermap_api_key
-    REACT_APP_GPT_KEY=your_openweathermap_api_key
-    ```
+```
+REACT_APP_UNSPLASH_API=your_unsplash_api_key
+REACT_APP_WEATHER_API=your_openweathermap_api_key
+REACT_APP_GPT_KEY=your_openweathermap_api_key
+```
 <br>
 <br>
 
