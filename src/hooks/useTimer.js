@@ -27,6 +27,13 @@ export function useTimer(workMinutes, breakMinutes) {
 
   const togglePause = () => setIsPaused(!isPaused);
 
+  // 모드 전환 함수
+  const switchMode = (newMode) => {
+    setMode(newMode);
+    setIsPaused(true); // 모드 변경 시 타이머를 일시정지 상태로 유지
+    setSecondsLeft(newMode === 'work' ? workMinutes * 60 : breakMinutes * 60);
+  };
+
   const totalSeconds = mode === 'work' ? workMinutes * 60 : breakMinutes * 60;
   const percentage = Math.round((secondsLeft / totalSeconds) * 100);
   const innerPercentage = percentage / 2;
@@ -39,6 +46,7 @@ export function useTimer(workMinutes, breakMinutes) {
     togglePause,
     mode,
     minutes,
+    switchMode,
     seconds,
     percentage,
     innerPercentage,

@@ -13,8 +13,8 @@ import { FaArrowRightArrowLeft } from 'react-icons/fa6';
 import { useLocation } from 'react-router-dom';
 import { useTimer } from 'hooks/useTimer';
 
-const red = 'rgba(88, 187, 211, 0.8)';
-const green = 'rgba(34, 187, 140, 0.85)';
+const red = 'rgba(255, 255, 255, 0.3)';
+const green = 'rgba(106, 164, 199, 0.5)';
 
 export default function Timer() {
   const { workMinutes, breakMinutes, setShowSettings } =
@@ -26,15 +26,37 @@ export default function Timer() {
 
   return (
     <div className={styles.progressBox} ref={clockRef}>
+      {/* changeArrow */}
       <span
         className={styles.changeArrow}
         onClick={() => setShowItemBox(!showItemBox)}
       >
         <FaArrowRightArrowLeft />
       </span>
+
       {showItemBox && (
         <Arrow location={location} itemBoxRef={itemBoxRef} styles={styles} />
       )}
+
+      <div className={styles.modeChangeBtn}>
+        {/* Focus 버튼: work 모드로 전환 */}
+        <button
+          onClick={() => Timer.switchMode('work')}
+          className={styles.focusButton}
+        >
+          Focus
+        </button>
+
+        {/* Break 버튼: break 모드로 전환 */}
+        <button
+          onClick={() => Timer.switchMode('break')}
+          className={styles.breakButton}
+        >
+          Break
+        </button>
+      </div>
+
+      {/* progress */}
       <CircularProgressbarWithChildren
         value={Timer.percentage}
         text={`${Timer.minutes}:${Timer.seconds}`}
@@ -51,7 +73,7 @@ export default function Timer() {
       >
         <div
           style={{
-            width: '84%',
+            width: '90%',
           }}
         >
           <CircularProgressbar
@@ -67,7 +89,8 @@ export default function Timer() {
             }
           />
         </div>
-        <div style={{ marginTop: '20px' }} className={styles.btnbox}>
+
+        <div className={styles.btnbox}>
           {Timer.isPaused ? (
             <PlayButton onClick={Timer.togglePause} />
           ) : (
@@ -76,7 +99,7 @@ export default function Timer() {
         </div>
       </CircularProgressbarWithChildren>
 
-      <div style={{ marginTop: '20px', textAlign: 'center' }}>
+      <div className={styles.settingBtn}>
         <SettingButton onClick={() => setShowSettings(true)} />
       </div>
     </div>
