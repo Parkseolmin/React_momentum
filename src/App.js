@@ -1,15 +1,22 @@
+import Loading from 'components/Loading/Loading';
+import React, { Suspense, lazy } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import TodoPage from 'pages/Todo/TodoPage';
-import PomodoroPage from 'pages/Pomodoro/PomodoroPage';
-import GptPage from 'pages/Gpt/GptPage';
-import Main from 'pages/Main/Main';
-import Time from 'pages/Time/Time';
+
+const TodoPage = lazy(() => import('pages/Todo/TodoPage'));
+const PomodoroPage = lazy(() => import('pages/Pomodoro/PomodoroPage'));
+const GptPage = lazy(() => import('pages/Gpt/GptPage'));
+const Main = lazy(() => import('pages/Main/Main'));
+const Time = lazy(() => import('pages/Time/Time'));
 
 export default function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Main />,
+      element: (
+        <Suspense fallback={<Loading />}>
+          <Main />
+        </Suspense>
+      ),
       children: [
         { index: true, element: <Time /> },
         { path: '/todo', element: <TodoPage /> },
@@ -18,5 +25,6 @@ export default function App() {
       ],
     },
   ]);
+
   return <RouterProvider router={router}></RouterProvider>;
 }
