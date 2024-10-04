@@ -26,7 +26,7 @@ export default function Search() {
           placeholder='Search'
           className={styles.input}
         />
-        <button className={styles.formBtn}>
+        <button className={styles.formBtn} aria-label='Search'>
           <FaSearch />
         </button>
       </div>

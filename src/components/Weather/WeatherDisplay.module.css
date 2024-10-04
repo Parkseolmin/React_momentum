@@ -9,11 +9,14 @@ p {
 }
 img {
   width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
 }
 .weatherInfo {
   position: relative;
   cursor: pointer;
   color: white;
+  margin-left: 20px;
 }
 
 .iconTmp {
@@ -21,7 +24,7 @@ img {
   justify-content: flex-end;
   align-items: center;
   line-height: 10px;
-  padding: 10px 10px 0 30px;
+  padding: 20px 10px 10px 30px;
   gap: 10px;
 }
 .iconTmp > span {
@@ -41,8 +44,17 @@ img {
   letter-spacing: -1px;
 }
 
+.loadingSpinner {
+  margin-top: 30px;
+  margin-left: 35px;
+}
+
 @media screen and (max-width: 768px) {
   .weatherName {
     font-size: 0.8rem;
+  }
+  .loadingSpinner {
+    margin-top: 30px;
+    margin-right: 35px;
   }
 }
