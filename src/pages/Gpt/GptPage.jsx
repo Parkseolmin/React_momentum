@@ -47,7 +47,11 @@ export default function GptPage() {
         {/* 어두운 모드 토글 버튼 */}
         <div className={styles.AppTitle}>
           <div className={styles.BtnContainer}>
-            <button onClick={toggleDarkMode} className={styles.Btn}>
+            <button
+              onClick={toggleDarkMode}
+              className={styles.Btn}
+              aria-label='themeButton'
+            >
               {darkMode ? <MdNightlightRound /> : <IoSunny />}
             </button>
           </div>
