@@ -22,7 +22,7 @@ export default function AddTodo({ onAdd }) {
         onChange={handleChange}
         className={styles.input}
       />
-      <button className={styles.button}>
+      <button className={styles.button} aria-label='todoAddButton'>
         <FaPlus />
       </button>
     </form>

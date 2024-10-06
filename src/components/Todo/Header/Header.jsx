@@ -7,7 +7,11 @@ export default function Header({ filters, filter, onFilterChange }) {
   const { darkMode, toggleDarkMode } = useDarkModeContext();
   return (
     <header className={styles.header}>
-      <button onClick={toggleDarkMode} className={styles.toggle}>
+      <button
+        onClick={toggleDarkMode}
+        className={styles.toggle}
+        aria-label='themeButton'
+      >
         {darkMode ? <MdNightlightRound /> : <IoSunny />}
       </button>
       <ul className={styles.filters}>
