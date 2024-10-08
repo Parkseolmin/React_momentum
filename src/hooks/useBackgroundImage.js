@@ -32,7 +32,7 @@ export function useBackgroundImage() {
   useEffect(() => {
     const lastFetchTime = parseInt(localStorage.getItem('lastFetchTime'), 10);
 
-    // 5시간이 지났거나 처음 로드된 경우 refetch() 호출
+    // 5시간이 지났거나 처음 로드된 경우 refetch() 호출함
     if (
       !backgroundImageUrl ||
       Date.now() - lastFetchTime > 1000 * 60 * 60 * 5
