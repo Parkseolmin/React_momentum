@@ -10,11 +10,12 @@ export default function WeatherDisplay() {
     isLoading,
     handleRefresh,
     weatherIconUrl,
+    permissionError,
   } = useWeather();
 
   // if (isPending || isLoading) return <p>로딩 중</p>;
   if (error) return <p>Error: {error.message}</p>;
-  if (!weather) return <p>No weather data available.</p>;
+  // if (!weather) return <p>No weather data available.</p>;
   return (
     <section className={styles.weatherInfo} onClick={handleRefresh}>
       {isLoading || isPending ? (

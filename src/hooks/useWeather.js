@@ -20,7 +20,7 @@ export const useWeather = () => {
         }
       );
     }
-  }, []);
+  }, [coords]);
 
   const fetchWeather = async ({ queryKey }) => {
     const [{ lat, lon }] = queryKey;
@@ -55,6 +55,7 @@ export const useWeather = () => {
     ? weatherIconMap[weather.weather[0].icon]
     : null;
 
+  console.log('weather icon url:', weather);
   return {
     weather,
     error,
