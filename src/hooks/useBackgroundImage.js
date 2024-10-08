@@ -43,16 +43,8 @@ export function useBackgroundImage() {
     };
 
     if (!backgroundImageUrl) {
-      // fetchImage() //
-      //   .then((imageUrl) => {
-      //     if (isMounted) {
-      //       setBackgroundImageUrl(imageUrl);
-      //     }
-      //   })
-      //   .catch(console.error);
       fetchAndSetImage();
     } else {
-      // 이미지 URL이 있을 경우, lastFetchTime을 확인하여 5시간이 지났는지 검사
       const lastFetchTime = parseInt(localStorage.getItem('lastFetchTime'), 10);
       if (Date.now() - lastFetchTime > 1000 * 60 * 60 * 5 || !lastFetchTime) {
         fetchAndSetImage();
