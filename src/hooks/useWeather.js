@@ -6,9 +6,49 @@ import { useEffect, useState } from 'react';
 export const useWeather = () => {
   const [coords, setCoords] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [permissionError, setPermissionError] = useState(null); // 권한 오류 상태 관리
 
   useEffect(() => {
-    if (navigator.geolocation) {
+    const requestLocationPermission = async () => {
+      if (navigator.permissions) {
+        try {
+          const permissionStatus = await navigator.permissions.query({
+            name: 'geolocation',
+          });
+
+          if (permissionStatus.state === 'granted') {
+            // 권한이 이미 허용된 경우
+            getCurrentPosition();
+          } else if (permissionStatus.state === 'prompt') {
+            // 권한 요청을 사용자에게 보여줌
+            navigator.geolocation.getCurrentPosition(
+              (position) => {
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
+                setCoords({ lat, lon });
+              },
+              (error) => {
+                setPermissionError('위치 권한이 거부되었습니다.');
+                console.error('Geolocation error:', error);
+              }
+            );
+          } else {
+            setPermissionError('위치 권한이 거부되었습니다.');
+          }
+
+          // 권한 상태 변화 감지
+          permissionStatus.onchange = () => {
+            if (permissionStatus.state === 'granted') {
+              getCurrentPosition();
+            }
+          };
+        } catch (error) {
+          console.error('Permissions API를 사용할 수 없습니다.', error);
+        }
+      }
+    };
+
+    const getCurrentPosition = () => {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const lat = position.coords.latitude;
@@ -16,11 +56,14 @@ export const useWeather = () => {
           setCoords({ lat, lon });
         },
         (error) => {
-          console.error('Geolocation is not supported by this browser.', error);
+          setPermissionError('위치 권한이 거부되었습니다.');
+          console.error('Geolocation error:', error);
         }
       );
-    }
-  }, [coords]);
+    };
+
+    requestLocationPermission();
+  }, []);
 
   const fetchWeather = async ({ queryKey }) => {
     const [{ lat, lon }] = queryKey;
@@ -40,6 +83,7 @@ export const useWeather = () => {
     enabled: !!coords,
     staleTime: 1000 * 60 * 60,
   });
+
   const handleRefresh = async () => {
     setIsLoading(true);
     try {
@@ -55,7 +99,6 @@ export const useWeather = () => {
     ? weatherIconMap[weather.weather[0].icon]
     : null;
 
-  console.log('weather icon url:', weather);
   return {
     weather,
     error,
@@ -63,5 +106,6 @@ export const useWeather = () => {
     isLoading,
     handleRefresh,
     weatherIconUrl,
+    permissionError, // 권한 오류 상태 반환
   };
 };

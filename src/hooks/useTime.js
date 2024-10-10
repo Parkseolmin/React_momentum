@@ -5,7 +5,7 @@ export const useTime = () => {
   const [time, setTime] = useState(() => new Date());
   useInterval(() => {
     setTime(new Date());
-  }, 1000);
+  }, 10000);
 
   const formatTime = (date) => {
     return date.toLocaleTimeString('en-US', {
