@@ -6,7 +6,6 @@ export function useBackgroundImage() {
   const [backgroundImageUrl, setBackgroundImageUrl] = useState(
     () => localStorage.getItem('backgroundImageUrl') || ''
   );
-
   const url = `https://api.unsplash.com/photos/random?query=dark&client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}`;
 
   const fetchImage = useCallback(async () => {
@@ -21,25 +20,30 @@ export function useBackgroundImage() {
     }
   }, [url]);
 
-  const { isLoading, error, refetch } = useQuery({
+  const { isLoading, error } = useQuery({
     queryKey: ['backgroundImage'],
     queryFn: fetchImage,
     enabled: !backgroundImageUrl,
     staleTime: 1000 * 60 * 60 * 5,
     onSuccess: (data) => setBackgroundImageUrl(data),
   });
+  console.log('backgroundImageUrl', localStorage.getItem('backgroundImageUrl'));
 
   useEffect(() => {
-    const lastFetchTime = parseInt(localStorage.getItem('lastFetchTime'), 10);
+    const fetchImageData = async () => {
+      const lastFetchTime = parseInt(localStorage.getItem('lastFetchTime'), 10);
+      if (
+        !backgroundImageUrl ||
+        Date.now() - lastFetchTime > 1000 * 60 * 60 * 5 ||
+        !lastFetchTime
+      ) {
+        const newImageUrl = await fetchImage();
+        setBackgroundImageUrl(newImageUrl); // 상태 업데이트
+      }
+    };
 
-    // 5시간이 지났거나 처음 로드된 경우 refetch() 호출함
-    if (
-      !backgroundImageUrl ||
-      Date.now() - lastFetchTime > 1000 * 60 * 60 * 5
-    ) {
-      refetch();
-    }
-  }, [backgroundImageUrl, refetch]);
+    fetchImageData(); // 비동기 함수 실행
+  }, [backgroundImageUrl]);
 
   return { isLoading, error, backgroundImageUrl };
 }

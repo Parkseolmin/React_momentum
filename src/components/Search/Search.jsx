@@ -25,6 +25,7 @@ export default function Search() {
           onChange={handleChange}
           placeholder='Search'
           className={styles.input}
+          aria-label='Search'
         />
         <button className={styles.formBtn} aria-label='Search'>
           <FaSearch />
