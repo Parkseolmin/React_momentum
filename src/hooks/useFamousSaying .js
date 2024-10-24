@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { kadvice } from 'kadvice';
 
 const useFamousSaying = () => {
-  const [isEnabled, setIsEnabled] = useState(true); // 초기에는 enabled를 true로 설정
+  const [isEnabled, setIsEnabled] = useState(true);
 
   const fetchSaying = () => {
     const advice = kadvice.getOne();

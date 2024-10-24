@@ -5,12 +5,10 @@
 }
 .circularProgressbarWorkMode {
   position: relative;
-  /* filter: drop-shadow(8px 8px 8px rgba(88, 187, 211, 0.8)); */
 }
 
 .circularProgressbarBreakMode {
   position: relative;
-  /* filter: drop-shadow(8px 8px 8px rgba(53, 243, 110, 0.8)); */
 }
 
 .btnbox {
@@ -48,7 +46,7 @@
 .itmeBox {
   font-size: 2.5rem;
   background-color: #fff;
-  display: inline-block; /* React 상태에 따라 동적으로 제어되므로 이 줄을 제거합니다. */
+  display: inline-block;
   color: rgb(146, 146, 146);
   border-radius: 20px;
   line-height: 1px;
