@@ -1,9 +1,8 @@
-# Momentum 🗓️
+# Momentum v1.0.1 🗓️
 
 <div align="center"><img src="https://github.com/user-attachments/assets/5c73d4dd-8390-4779-baa3-e8b5a48b0d05" alt="Momentum이미지" width="300"/></div>
 <br>
 <p align="center">배포 URL : <a href="https://momentum-wine.vercel.app" target="_blank">https://momentum-wine.vercel.app/</a></p>
-<br>
 
 ## 목차
 1. [소개](#소개)
@@ -83,15 +82,15 @@ REACT_APP_GPT_KEY=your_openweathermap_api_key
 
 ## 버전 정보
 
-현재 버전: v1.0.0 (베타)
+현재 버전: v1.0.1
 
 향후 업데이트 계획:
-- v1.1.0: 성능 최적화
+- v1.0.1: 성능 최적화
   - Google Chrome의 Lighthouse를 통해 최적화 진행
   - 반응성, 접근성, SEO 최적화
   - 코드 품질 향상
   - 사용자 경험 개선
-- v1.2.0: TypeScript로의 전환
+- v1.0.2: TypeScript로의 전환
   - 정적 타입 검사를 통한 코드 안정성 향상
   - 개발자 경험 개선 및 버그 감소
   - 더 나은 유지보수성과 확장성 확보
@@ -101,5 +100,5 @@ REACT_APP_GPT_KEY=your_openweathermap_api_key
 ## 프로젝트 회고록 및 진행 기록 보러가기
 
 - [ver1.0.0 Blog 글 보러가기](https://snowman-seolmini.tistory.com/70)
-- [ver1.1.1 Blog 글 보러가기](https://snowman-seolmini.tistory.com/101)
+- [ver1.0.1 Blog 글 보러가기](https://snowman-seolmini.tistory.com/101)
 
