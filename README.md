@@ -105,5 +105,5 @@ REACT_APP_GPT_KEY=your_openweathermap_api_key
 
 <a href="https://snowman-seolmini.tistory.com/101" target="_blank"><p>[ver1.1.1 Blog 글 보러가기]</p></a>
 
-</a>
+
 </div>
