@@ -97,7 +97,7 @@ REACT_APP_GPT_KEY=your_openweathermap_api_key
 <br>
 <br>
 
-## 프로젝트 회고록 보러가기
+## 프로젝트 회고 & 진행 기록 보러가기
 
 - [ver1.0.0 Blog 글 보러가기](https://snowman-seolmini.tistory.com/70)
 - [ver1.1.1 Blog 글 보러가기](https://snowman-seolmini.tistory.com/101)
