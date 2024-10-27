@@ -101,9 +101,9 @@ REACT_APP_GPT_KEY=your_openweathermap_api_key
 <div display="flex" flexdirection="column">
 <p>[ver1.0.0 Blog 글 보러가기]</p>
 <a href="https://snowman-seolmini.tistory.com/70" target="_blank">
-<img width="300" alt="profile" src="https://github.com/user-attachments/assets/40d8b6b5-2a4d-419e-b484-16f369f0e6f9"/>
+<img loading='eager' width="300" alt="profile" src="https://github.com/user-attachments/assets/40d8b6b5-2a4d-419e-b484-16f369f0e6f9"/>
 <p>[ver1.1.1 Blog 글 보러가기]</p>
 <a href="https://snowman-seolmini.tistory.com/101" target="_blank">
-<img width="300" alt="profile" src="https://github.com/user-attachments/assets/40d8b6b5-2a4d-419e-b484-16f369f0e6f9"/>
+<img loading='eager' width="300" alt="profile" src="https://github.com/user-attachments/assets/40d8b6b5-2a4d-419e-b484-16f369f0e6f9"/>
 </a>
 </div>
