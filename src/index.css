@@ -46,6 +46,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.yt_article_summary_widget_wrapper,
+.glasp_pdf_summary_btn {
+  display: block !important;
+}
+
 /* 스크롤바 전체 영역 */
 ::-webkit-scrollbar {
   width: 1px; /* 세로축 스크롤바 폭 너비 */

@@ -66,6 +66,7 @@ a.active {
 }
 
 .modeChangeBtn {
+  display: flex;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -109,5 +110,10 @@ a.active {
   }
   .btnbox {
     bottom: 4rem;
+  }
+  .focusButton,
+  .breakButton {
+    padding: 0px;
+    margin: 0px;
   }
 }
