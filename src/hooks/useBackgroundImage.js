@@ -27,7 +27,6 @@ export function useBackgroundImage() {
     staleTime: 1000 * 60 * 60 * 5,
     onSuccess: (data) => setBackgroundImageUrl(data),
   });
-  console.log('backgroundImageUrl', localStorage.getItem('backgroundImageUrl'));
 
   useEffect(() => {
     let isMounted = true;
