@@ -27,7 +27,6 @@ export function useBackgroundImage() {
     staleTime: 1000 * 60 * 60 * 5,
     onSuccess: (data) => setBackgroundImageUrl(data),
   });
-  console.log('backgroundImageUrl', localStorage.getItem('backgroundImageUrl'));
 
   useEffect(() => {
     const fetchImageData = async () => {
@@ -37,13 +36,13 @@ export function useBackgroundImage() {
         Date.now() - lastFetchTime > 1000 * 60 * 60 * 5 ||
         !lastFetchTime
       ) {
-        const newImageUrl = await fetchImage();
+        const newImageUrl = await fetchImage(); // 비동기 호출
         setBackgroundImageUrl(newImageUrl); // 상태 업데이트
       }
     };
 
     fetchImageData(); // 비동기 함수 실행
-  }, [backgroundImageUrl]);
+  }, [backgroundImageUrl]); // 의존성에 backgroundImageUrl 추가
 
   return { isLoading, error, backgroundImageUrl };
 }
