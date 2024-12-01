@@ -1,5 +1,8 @@
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
+import {
+  CircularProgressbar,
+  buildStyles,
+  CircularProgressbarWithChildren,
+} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { useContext } from 'react';
 import { SettingsContext } from 'context/SettingsContext';
@@ -13,8 +16,8 @@ import { FaArrowRightArrowLeft } from 'react-icons/fa6';
 import { useLocation } from 'react-router-dom';
 import { useTimer } from 'hooks/useTimer';
 
-const red = 'rgba(255, 255, 255, 0.3)';
-const green = 'rgba(106, 164, 199, 0.5)';
+const workTimeColor = 'rgba(255, 255, 255, 0.3)';
+const breakTimeColor = 'rgba(106, 164, 199, 0.5)';
 
 export default function Timer() {
   const { workMinutes, breakMinutes, setShowSettings } =
@@ -62,7 +65,7 @@ export default function Timer() {
         text={`${Timer.minutes}:${Timer.seconds}`}
         styles={buildStyles({
           textColor: '#fff',
-          pathColor: Timer.mode === 'work' ? red : green,
+          pathColor: Timer.mode === 'work' ? workTimeColor : breakTimeColor,
           trailColor: 'transparent',
         })}
         className={
@@ -79,7 +82,7 @@ export default function Timer() {
           <CircularProgressbar
             value={Timer.innerPercentage}
             styles={buildStyles({
-              pathColor: Timer.mode === 'work' ? red : green,
+              pathColor: Timer.mode === 'work' ? workTimeColor : breakTimeColor,
               trailColor: 'transparent',
             })}
             className={

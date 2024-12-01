@@ -32,7 +32,11 @@ export default function Todo({ todo, onUpdate, onDelete }) {
       >
         {text}
       </label>
-      <button onClick={handleDelete} className={styles.button}>
+      <button
+        onClick={handleDelete}
+        className={styles.button}
+        aria-label='todoDeleteButton'
+      >
         <LuDelete />
       </button>
     </li>

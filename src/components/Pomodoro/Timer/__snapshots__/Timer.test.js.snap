@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timer Component Snapshot Test 1`] = `
+<DocumentFragment>
+  <div
+    class="progressBox"
+  >
+    <span
+      class="changeArrow"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 448 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M438.6 150.6c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.7 96 32 96C14.3 96 0 110.3 0 128s14.3 32 32 32l306.7 0-41.4 41.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l96-96zm-333.3 352c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 416 416 416c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0 41.4-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96z"
+        />
+      </svg>
+    </span>
+    <div
+      class="modeChangeBtn"
+    >
+      <button
+        class="focusButton"
+      >
+        Focus
+      </button>
+      <button
+        class="breakButton"
+      >
+        Break
+      </button>
+    </div>
+    <div
+      data-test-id="CircularProgressbarWithChildren"
+    >
+      <div
+        style="position: relative; width: 100%; height: 100%;"
+      >
+        <svg
+          class="CircularProgressbar circularProgressbarBreakMode"
+          data-test-id="CircularProgressbar"
+          viewBox="0 0 100 100"
+        >
+          <path
+            class="CircularProgressbar-trail"
+            d="
+      M 50,50
+      m 0,-46
+      a 46,46 0 1 1 0,92
+      a 46,46 0 1 1 0,-92
+    "
+            fill-opacity="0"
+            stroke-width="8"
+            style="stroke: transparent; stroke-dasharray: 289.02652413026095px 289.02652413026095px; stroke-dashoffset: 0px;"
+          />
+          <path
+            class="CircularProgressbar-path"
+            d="
+      M 50,50
+      m 0,-46
+      a 46,46 0 1 1 0,92
+      a 46,46 0 1 1 0,-92
+    "
+            fill-opacity="0"
+            stroke-width="8"
+            style="stroke: rgba(255, 255, 255, 0.3); stroke-dasharray: 289.02652413026095px 289.02652413026095px; stroke-dashoffset: 144.51326206513048px;"
+          />
+          <text
+            class="CircularProgressbar-text"
+            style="fill: #fff;"
+            x="50"
+            y="50"
+          >
+            25:00
+          </text>
+        </svg>
+        <div
+          data-test-id="CircularProgressbarWithChildren__children"
+          style="position: absolute; width: 100%; height: 100%; margin-top: -100%; display: flex; flex-direction: column; justify-content: center; align-items: center;"
+        >
+          <div
+            style="width: 90%;"
+          >
+            <svg
+              class="CircularProgressbar circularProgressbarWorkMode"
+              data-test-id="CircularProgressbar"
+              viewBox="0 0 100 100"
+            >
+              <path
+                class="CircularProgressbar-trail"
+                d="
+      M 50,50
+      m 0,-46
+      a 46,46 0 1 1 0,92
+      a 46,46 0 1 1 0,-92
+    "
+                fill-opacity="0"
+                stroke-width="8"
+                style="stroke: transparent; stroke-dasharray: 289.02652413026095px 289.02652413026095px; stroke-dashoffset: 0px;"
+              />
+              <path
+                class="CircularProgressbar-path"
+                d="
+      M 50,50
+      m 0,-46
+      a 46,46 0 1 1 0,92
+      a 46,46 0 1 1 0,-92
+    "
+                fill-opacity="0"
+                stroke-width="8"
+                style="stroke: rgba(255, 255, 255, 0.3); stroke-dasharray: 289.02652413026095px 289.02652413026095px; stroke-dashoffset: 216.76989309769573px;"
+              />
+            </svg>
+          </div>
+          <div
+            class="btnbox"
+          >
+            <button
+              class="playbtn"
+            >
+              <p>
+                START
+              </p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="settingBtn"
+    >
+      <button
+        class="withText"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 4.889c-.02.12-.115.26-.297.348a7.493 7.493 0 0 0-.986.57c-.166.115-.334.126-.45.083L6.3 5.508a1.875 1.875 0 0 0-2.282.819l-.922 1.597a1.875 1.875 0 0 0 .432 2.385l.84.692c.095.078.17.229.154.43a7.598 7.598 0 0 0 0 1.139c.015.2-.059.352-.153.43l-.841.692a1.875 1.875 0 0 0-.432 2.385l.922 1.597a1.875 1.875 0 0 0 2.282.818l1.019-.382c.115-.043.283-.031.45.082.312.214.641.405.985.57.182.088.277.228.297.35l.178 1.071c.151.904.933 1.567 1.85 1.567h1.844c.916 0 1.699-.663 1.85-1.567l.178-1.072c.02-.12.114-.26.297-.349.344-.165.673-.356.985-.57.167-.114.335-.125.45-.082l1.02.382a1.875 1.875 0 0 0 2.28-.819l.923-1.597a1.875 1.875 0 0 0-.432-2.385l-.84-.692c-.095-.078-.17-.229-.154-.43a7.614 7.614 0 0 0 0-1.139c-.016-.2.059-.352.153-.43l.84-.692c.708-.582.891-1.59.433-2.385l-.922-1.597a1.875 1.875 0 0 0-2.282-.818l-1.02.382c-.114.043-.282.031-.449-.083a7.49 7.49 0 0 0-.985-.57c-.183-.087-.277-.227-.297-.348l-.179-1.072a1.875 1.875 0 0 0-1.85-1.567h-1.843ZM12 15.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+        Settings
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

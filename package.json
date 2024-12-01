@@ -5,9 +5,6 @@
   "dependencies": {
     "@tanstack/react-query": "^5.36.2",
     "@tanstack/react-query-devtools": "^5.36.2",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "antd": "^5.17.3",
     "axios": "^1.6.8",
     "kadvice": "^2.0.2",
@@ -25,7 +22,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watch --verbose",
+    "test:coverage": "npm test -- --coverage --watchAll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -45,5 +43,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^29.5.14"
   }
 }
