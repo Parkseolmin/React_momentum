@@ -1,4 +1,4 @@
-name: CI Workflow
+name: CI/CD Workflow
 
 on:
   push:
@@ -19,10 +19,23 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 21 # 사용 중인 Node.js 버전에 맞게 변경
+          node-version: 21
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run Tests
-        run: npm test
+        run: npm test -- --ci --maxWorkers=2
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: npx vercel --prod
