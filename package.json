@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-transform-class-properties": "^7.25.9",
+    "@babel/plugin-transform-private-methods": "^7.25.9",
+    "@rollup/plugin-terser": "^0.4.4",
     "@tanstack/react-query": "^5.62.0",
     "@tanstack/react-query-devtools": "^5.62.0",
     "antd": "^5.22.2",
