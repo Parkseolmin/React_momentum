@@ -10,7 +10,6 @@ export default function WeatherDisplay() {
     isLoading,
     handleRefresh,
     weatherIconUrl,
-    permissionError,
   } = useWeather();
 
   // if (isPending || isLoading) return <p>로딩 중</p>;
